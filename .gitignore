@@ -13,4 +13,5 @@ buildNumber.properties
 **/standalone/tmp/
 **/standalone/log/
 **/standalone/data/
-**/standalone/deployments/*.war
+**/standalone_xml_history/
+**/standalone/deployments/*.war*
