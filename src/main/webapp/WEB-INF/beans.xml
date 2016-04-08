@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+
+    <scan>
+        <exclude name="com.acme.rest.*" />
+
+        <exclude name="com.acme.faces.**">
+            <if-class-not-available name="javax.faces.context.FacesContext" />
+        </exclude>
+
+        <exclude name="com.acme.verbose.*">
+            <if-system-property name="verbosity"
+                value="low" />
+        </exclude>
+
+        <exclude name="com.acme.ejb.**">
+            <if-class-available name="javax.enterprise.inject.Model" />
+            <if-system-property name="exclude-ejbs" />
+        </exclude>
+    </scan>
+</beans>

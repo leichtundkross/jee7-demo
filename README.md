@@ -1,6 +1,7 @@
 # jee7-demo
 
 Sample code for certain JavaEE 7 features, including:
+* CDI 1.1
 * JMS 2.0
 * ...
 
