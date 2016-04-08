@@ -7,3 +7,10 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+.classpath
+.project
+.settings/
+**/standalone/tmp/
+**/standalone/log/
+**/standalone/data/
+**/standalone/deployments/*.war
