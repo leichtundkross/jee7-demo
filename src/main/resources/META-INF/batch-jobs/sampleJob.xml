@@ -1,0 +1,13 @@
+<job id="sampleJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    version="1.0">
+    <step id="step1">
+        <chunk item-count="3">
+            <reader ref="sampleItemReader" />
+            <processor ref="sampleItemProcessor" />
+            <writer ref="sampleLogItemWriter" />
+        </chunk>
+        <listeners>
+            <listener ref="sampleItemWriteReader" />
+        </listeners>
+    </step>
+</job> 
