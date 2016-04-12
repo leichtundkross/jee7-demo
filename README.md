@@ -6,6 +6,6 @@ Sample code for certain JavaEE 7 features, including:
 * JAX-RS 2.0
 * JMS 2.0
 * JSON-P 1.0
-* ...
+* Concurrency Utilities for Java EE
 
 Project includes a configured wildfly 10 distribution to run the sample.
