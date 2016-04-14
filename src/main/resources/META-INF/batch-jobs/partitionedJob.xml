@@ -13,7 +13,11 @@
         </chunk>
         <partition>
             <mapper
-                ref="com.github.leichtundkross.jee7.batch.partitionedjob.SamplePartitionMapper" />
+                ref="com.github.leichtundkross.jee7.batch.partitionedjob.SamplePartitionMapper">
+                <properties>
+                    <property name="threads" value="5" />
+                </properties>
+            </mapper>
         </partition>
     </step>
 </job> 
