@@ -5,7 +5,9 @@ import javax.inject.Named;
 
 import com.github.leichtundkross.jee7.batch.samplejob.model.Person;
 
-@Named
+/**
+ * No {@link Named} annotation. We need to define full qualified class name in job xml.
+ */
 public class SampleItemProcessor implements ItemProcessor {
 
 	@Override

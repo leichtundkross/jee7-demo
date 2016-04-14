@@ -7,9 +7,9 @@ import javax.batch.api.chunk.listener.AbstractItemWriteListener;
 import javax.inject.Named;
 
 @Named
-public class SampleItemWriteReader extends AbstractItemWriteListener {
+public class SampleItemWriteListener extends AbstractItemWriteListener {
 
-	private static final Logger LOGGER = Logger.getLogger(SampleItemWriteReader.class.getCanonicalName());
+	private static final Logger LOGGER = Logger.getLogger(SampleItemWriteListener.class.getCanonicalName());
 
 	@Override
 	public void afterWrite(List<Object> items) throws Exception {

@@ -7,7 +7,7 @@ import java.util.Iterator;
 import javax.batch.api.chunk.AbstractItemReader;
 import javax.inject.Named;
 
-@Named
+@Named("SampleItemReader")
 public class SampleItemReader extends AbstractItemReader {
 
 	private Iterator<String> iter;

@@ -9,6 +9,9 @@ import javax.inject.Named;
 
 import com.github.leichtundkross.jee7.batch.samplejob.model.Person;
 
+/**
+ * Using {@link Named} annotation without specifying value results in a name equal to class name but with lower case capital letter.
+ */
 @Named
 public class SampleLogItemWriter extends AbstractItemWriter {
 

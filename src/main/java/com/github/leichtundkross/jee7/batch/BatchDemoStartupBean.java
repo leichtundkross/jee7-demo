@@ -25,14 +25,19 @@ public class BatchDemoStartupBean {
 
 	@PostConstruct
 	public void delayInit() {
-		timerService.createSingleActionTimer(6000l, new TimerConfig(null, false));
+		timerService.createSingleActionTimer(7000l, new TimerConfig(null, false));
 	}
 
 	@Timeout
 	public void startJob() {
+		startJob("sampleJob");
+		startJob("partitionedJob");
+	}
+
+	private void startJob(String jobName) {
 		JobOperator jobOperator = BatchRuntime.getJobOperator();
-		long executionId = jobOperator.start("sampleJob", new Properties());
-		LOGGER.info("Started Job 'sampleJob' with id " + executionId);
+		long executionId = jobOperator.start(jobName, new Properties());
+		LOGGER.info("Started Job '" + jobName + "' with id " + executionId);
 
 		// check status
 		try {

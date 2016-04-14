@@ -1,0 +1,19 @@
+<job id="partitionedJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    version="1.0">
+    <step id="step1">
+        <chunk item-count="10">
+            <reader ref="partitionedSampleItemReader">
+                <properties>
+                    <property name="partition"
+                        value="#{partitionPlan['partition']}" />
+                </properties>
+            </reader>
+            <writer
+                ref="com.github.leichtundkross.jee7.batch.partitionedjob.SampleLogItemWriter" />
+        </chunk>
+        <partition>
+            <mapper
+                ref="com.github.leichtundkross.jee7.batch.partitionedjob.SamplePartitionMapper" />
+        </partition>
+    </step>
+</job> 
