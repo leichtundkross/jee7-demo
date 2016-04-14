@@ -9,12 +9,17 @@ public class UnmanagedBean {
 		// create managed bean
 		Unmanaged<ManagedBean1> unmanagedFoo = new Unmanaged<>(ManagedBean1.class);
 		UnmanagedInstance<ManagedBean1> managedBean = unmanagedFoo.newInstance();
-		ManagedBean1 bean = managedBean.produce().inject().postConstruct().get();
+		ManagedBean1 bean = managedBean.produce() //
+				.inject() //
+				.postConstruct() //
+				.get();
 
 		// use bean
 		bean.sayHello();
 
 		// destroy bean
-		managedBean.preDestroy().dispose();
+		managedBean //
+				.preDestroy() //
+				.dispose();
 	}
 }

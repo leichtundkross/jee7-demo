@@ -7,7 +7,7 @@ import javax.interceptor.AroundConstruct;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 
-@Priority(Interceptor.Priority.APPLICATION + 100)
+@Priority(Interceptor.Priority.APPLICATION + 200)
 @Interceptor
 public class CDI11Interceptor {
 
@@ -16,7 +16,7 @@ public class CDI11Interceptor {
 	@AroundConstruct
 	public void interceptClassConstruction(InvocationContext ctx) throws Exception {
 		Class<? extends InvocationContext> classToConstruct = ctx.getClass();
-		LOGGER.info("Intecpt constrcution of new bean " + classToConstruct.getSimpleName());
+		LOGGER.info("Intercept constrcution of new bean " + classToConstruct.getSimpleName());
 		ctx.proceed();
 	}
 }
