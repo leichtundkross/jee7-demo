@@ -27,7 +27,7 @@ public class CustomerResource {
 
 	@GET
 	@Path("{name}")
-	@Produces("application/json")
+	@Produces({ "application/json; qs=0.8" ,"text/plain; qs=0.75" })
 	public Customer getCustomer(@PathParam("name") String name) {
 		return new Customer(name);
 	}
